@@ -15,35 +15,45 @@ struct ContentView: View {
 
 //MARK:- home view
 struct Home: View {
+    @State var color = 0
     var body: some View{
         GeometryReader { geometry in
             VStack{
                 ZStack (alignment: .top){
-                    VStack{
-                        Image("lamp1")
+                    
+                        Image(color == 0 ?"lamp1" : "lamp2")
                             .resizable()
                             .frame(height: geometry.size.height*0.4)
                         HStack(spacing: 10){
                             Button(action: {
-                                
+                                self.color = 0
                             }, label: {
                                 ZStack {
                                     Circle()
                                         .fill(Color.yellow)
                                     .frame(width: 20, height: 20)
                                     Circle()
-                                        .stroke(Color.orange, lineWidth: 3)
+                                        .stroke(self.color == 0 ? Color.orange: Color.white, lineWidth: 3)
                                         .frame(width: 30, height: 30)
                                 }
                                     
                             })
                             Button(action: {
-                                
+                                color = 1
                             }, label: {
-                                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+                                ZStack {
+                                    Circle()
+                                        .fill(Color.orange)
+                                        .frame(width: 20, height: 20)
+                                    Circle()
+                                        .stroke(self.color == 1 ? Color.orange: Color.white, lineWidth: 3)
+                                        .frame(width: 30, height: 30)
+                                }
                             })
                         }
-                    }
+                        .padding(.bottom, 10)
+                    
+                    
                     
                     HStack {
                         Button(action: {
@@ -61,6 +71,7 @@ struct Home: View {
                             Image("cart")
                                 .renderingMode(.original)
                                 .padding()
+                            
                                 
                                 
                         })
@@ -69,18 +80,42 @@ struct Home: View {
                         .background(Color.white)
                         .clipShape(customShape(corner: .bottomLeft, raddi: 35))
                         
+                        
                     }
-                    
-                        
-                        
-                    
                 }
-                .background(Color.yellow)
+                .background(self.color == 0 ? Color.yellow : Color.orange)
+                .clipShape(customShape(corner: .bottomLeft, raddi: 55))
                 
-                    
+                HStack{
+                    Text("Melodi Lamp")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    Spacer()
+                    Button(action: {
+                        
+                    }, label: {
+                        Image("heart")
+                            .renderingMode(.original)
+                            .padding()
+                    })
+                    .background(self.color == 0 ? Color.yellow : Color.orange)
+                    .clipShape(Circle())
+                }
+                .padding(.horizontal, 40)
+                .padding(.top)
+                
+                Text(names.talkAboutLamp)
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.gray)
+                    .padding(.horizontal)
+                    .padding(.top, 25)
+                
             }
+            
             .statusBar(hidden: true)
             .edgesIgnoringSafeArea(.all)
+            .animation(.default)
+            
         }
     }
 }

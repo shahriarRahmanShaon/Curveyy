@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00252F61262C371800C2D4EF /* stringCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00252F60262C371800C2D4EF /* stringCollection.swift */; };
 		0032A6FD2626E6B000DCC363 /* CurveyyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032A6FC2626E6B000DCC363 /* CurveyyApp.swift */; };
 		0032A6FF2626E6B000DCC363 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0032A6FE2626E6B000DCC363 /* ContentView.swift */; };
 		0032A7012626E6B200DCC363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0032A7002626E6B200DCC363 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00252F60262C371800C2D4EF /* stringCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringCollection.swift; sourceTree = "<group>"; };
 		0032A6F92626E6B000DCC363 /* Curveyy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curveyy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0032A6FC2626E6B000DCC363 /* CurveyyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveyyApp.swift; sourceTree = "<group>"; };
 		0032A6FE2626E6B000DCC363 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				0032A6FC2626E6B000DCC363 /* CurveyyApp.swift */,
 				0032A6FE2626E6B000DCC363 /* ContentView.swift */,
+				00252F60262C371800C2D4EF /* stringCollection.swift */,
 				0032A7002626E6B200DCC363 /* Assets.xcassets */,
 				0032A7052626E6B200DCC363 /* Info.plist */,
 				0032A7022626E6B200DCC363 /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00252F61262C371800C2D4EF /* stringCollection.swift in Sources */,
 				0032A6FF2626E6B000DCC363 /* ContentView.swift in Sources */,
 				0032A6FD2626E6B000DCC363 /* CurveyyApp.swift in Sources */,
 			);
