@@ -110,6 +110,21 @@ struct Home: View {
                     .padding(.horizontal)
                     .padding(.top, 25)
                 
+                HStack(spacing: geometry.size.width*0.05){
+                    ForEach(names.boxElements , id:\.self ){ elements in
+                        VStack{
+                            Image(elements)
+                            Text("24mp")
+                                .font(.subheadline)
+                                .fontWeight(.bold)
+                        }
+                        .padding()
+                        .background(Color.black.opacity(0.05))
+                        .cornerRadius(20)
+                    }
+                }
+                .padding(.top)
+                
             }
             
             .statusBar(hidden: true)
